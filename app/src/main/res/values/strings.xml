@@ -2,4 +2,7 @@
     <string name="app_name">Api_App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="try_again">Try Again</string>
+    <string name="loading_nplease_wait">Loading......\nPlease wait</string>
 </resources>

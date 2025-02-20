@@ -1,25 +1,24 @@
 package com.example.api_app.ui.screens.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
 import com.example.api_app.api.ApiManager
 import com.example.api_app.api.model.SourcesResponse
 import com.example.api_app.databinding.ActivityHomeBinding
-import com.example.api_app.ui.base.BaseActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeActivity : BaseActivity<ActivityHomeBinding>(){
-    override fun inflateBinding(inflater: LayoutInflater): ActivityHomeBinding {
-        TODO("Not yet implemented")
-    }
+class HomeActivity :AppCompatActivity(){
+    lateinit var binding :ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         getSources()
     }
     private fun getSources(){
-        ApiManager.webservices().getSources(ApiManager.API_KEY)
+        ApiManager.webservices().getSources()
             .enqueue(object  :Callback<SourcesResponse>{
                 override fun onResponse(p0: Call<SourcesResponse>, response: Response<SourcesResponse>) {
                     if (response.isSuccessful){

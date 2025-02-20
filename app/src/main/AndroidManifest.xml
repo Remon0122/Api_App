@@ -15,7 +15,11 @@
         android:theme="@style/Theme.Api_App"
         tools:targetApi="31">
         <activity
-            android:name=".ui.screens.home.Home_Activity"
+            android:name=".ui.screens.home.HomeActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".ui.screens.splash.Splash"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
