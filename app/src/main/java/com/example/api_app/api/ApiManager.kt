@@ -14,11 +14,7 @@ class ApiManager  {
 
         private fun getInstance() : Retrofit{
             if (retrofit == null){
-                val logging = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
-                    override fun log(message: String) {
-                        Log.e("API_CALL","Massage")
-                    }
-                })
+                val logging = HttpLoggingInterceptor { Log.e("API_CALL", "Massage") }
                 logging.setLevel(HttpLoggingInterceptor.Level.BODY)
                 val okHttpClient = OkHttpClient.Builder()
                     .addInterceptor(logging)
