@@ -3,5 +3,6 @@
     <color name="black_primary">#171717</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="transparent">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorGrayA0">#A0A0A0</color>
 </resources>
